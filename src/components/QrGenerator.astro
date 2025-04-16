@@ -1,12 +1,55 @@
 ---
+
 ---
 
 <main class="container">
+  <div id="qrcode"></div>
+
   <section>
     <input type="text" name="Url" id="" />
     <input type="button" value="Generar Lista de QR" id="GenerarQR" />
   </section>
+
+  <section id="QrList_Section" class="QrList">
+    <ol id="QrList_Container" class="QrListContainer"></ol>
+  </section>
+
+  <section>
+    <div id="QrLIstImag_Container"></div>
+  </section>
 </main>
 
-
 <script src="../utils/GenerateIdQR.js"></script>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .QrList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .QrListContainer {
+    list-style-type: none;
+  }
+
+  .QrLIstImag_Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .QrLIstImag_Container div {
+    width: 200px;
+    height: 200px;
+    margin: 0.5rem;
+  }
+</style>
